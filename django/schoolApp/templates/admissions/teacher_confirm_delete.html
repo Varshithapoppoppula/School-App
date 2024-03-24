@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="POST">
+      <h3>Are you sure want  to delete this teacher record?</h3><br/>
+      <button type="sybmit" value="Confirm">Confirm</button>
+      {% csrf_token %}
+    </form>
+    <br/>
+    <a href="/ad/teacherslist"><button type="button" value="Cancle">Cancle</button></a>
+  </body>
+</html>

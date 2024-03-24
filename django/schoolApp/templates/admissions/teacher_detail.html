@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Teacher-Detail</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Teacher ID</th>
+        <th>Teacher Name</th>
+        <th>Experience</th>
+        <th>Subject</th>
+        <th>Contact</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.exp}}</td>
+        <td>{{teacher.subject}}</td>
+        <td>{{teacher.contact}}</td>
+        <td><a href="/ad/delete/{{s.id}}">Delete</a>&nbsp&nbsp&nbsp
+        <a href="/ad/update/{{s.id}}">update</a></td>
+      </tr>
+    </table><br/><br/>
+    <a href="/ad/homepage"><button input="button" type="button" name="homebutton">Homepage</button></a>
+  </body>
+  </html>

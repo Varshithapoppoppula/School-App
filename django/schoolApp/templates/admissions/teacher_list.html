@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Teacher</title>
+    <link href="{% static "stylesheets/style.css" %}" type="text/css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <h1>Teachers Report : 2022-23</h1>
+    <br/>
+    <table border="1">
+      <tr>
+        <th>Teacher ID</th>
+        <th>Teacher Name</th>
+        <th>Experience</th>
+        <th>Subject</th>
+        <th>Contact</th>
+        <th>Actions</th>
+      </tr>
+
+      {% for s in teacher_list %}
+      <tr>
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.exp}}</td>
+        <td>{{s.subject}}</td>
+        <td>{{s.contact}}</td>
+        <td><a href="/ad/deleteteacher/{{s.id}}">Delete</a>&nbsp&nbsp&nbsp
+        <a href="/ad/updateteacher/{{s.id}}">update</a></td>
+      </tr>
+      {% endfor %}
+    </table><br/><br/>
+    <a href="/ad/homepage"><button input="button" type="button" name="homebutton">Homepage</button></a>
+  </body>
+</html>

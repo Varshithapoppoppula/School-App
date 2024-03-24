@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Add-Vendor Page</title>
+    <link href="{% static "stylesheets/style.css" %}" type="text/css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <h1><center><u>hello, Welcome to Admissons template</u></center></h1>
+    <font face="impact" size="20">This is Add Vendor Page</font>
+    <img src="{% static "images/nicelogo.jpg" %}" alt="Image Not Found" />
+    <h3>Please fill the below Application</h3>
+    <br/><br/><br/>
+    <form method="POST">
+      <table>
+      {{form.as_table}}
+    </table>
+    <br/>
+    <input type="submit" value="Add Vendor" />
+    {% csrf_token %}
+    </form>
+  </body>
+
+</html>
